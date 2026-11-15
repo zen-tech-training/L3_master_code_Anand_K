@@ -1,0 +1,17 @@
+# Use official Python base image
+FROM python:3.12-slim
+
+# Set working directory
+WORKDIR ./
+
+# Copy dependency file
+COPY requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose application port
+EXPOSE 5000
+
+# Run Python application
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
