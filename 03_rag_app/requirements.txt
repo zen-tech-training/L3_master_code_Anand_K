@@ -5,3 +5,5 @@ langchain-community
 boto3
 pypdf
 langchain-text-splitters
+faiss-cpu
+
