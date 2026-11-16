@@ -1,6 +1,7 @@
 from fastapi import FastAPI, APIRouter
 
 from rag_pipeline import get_rag_pipeline
+
 app = FastAPI(title="RAG App")
 retriever, qa_chain = get_rag_pipeline()
 router = APIRouter()
